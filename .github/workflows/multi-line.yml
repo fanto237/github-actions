@@ -5,6 +5,8 @@ jobs:
   theFirstJob:
     runs-on: ubuntu-latest
     steps:
+      - name: Test
+        run: echo "TEST"
       - name: Run Multiline
         run: |
               echo "This is the first lien"
