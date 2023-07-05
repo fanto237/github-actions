@@ -1,5 +1,5 @@
 name: multi-line-action
-on: worklow_dispatch
+on: workflow_dispatch
 
 jobs:
   theFirstJob:
@@ -11,8 +11,8 @@ jobs:
               echo "this is the secon line"
               echo "this will create a file named touchy" > touchy
               cat touchy
-        - name: Same Machine 
-          run: |
-                pwd
-                ls 
+      - name: Same Machine 
+        run: |
+              pwd
+              ls 
               
