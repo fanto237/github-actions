@@ -1,20 +1,19 @@
+name: multi-line-action
+on: workflow_dispatch
 
-              
-name: Multi Workflow
-
-# on is used to specified when the workflow will be run
-# it is the trigger event
-on: workflow_dispatch # with this trigger the workflow can manually be started 
-
-# the jobs that will be runned
-jobs: 
-  # here come the first job
-  first-job:
-    # define the runner where the job will be executed
+jobs:
+  theFirstJob:
     runs-on: ubuntu-latest
-    # define the steps, that will be executed
     steps:
-      - name: Print greeting
-        run: echo "Hello world, from github action"
-      - name: Print goodbye
-        run: echo "Done, GoodBye"
+      - name: Test
+        run: echo "TEST"
+      - name: Run Multiline
+        run: |
+              echo "This is the first lien"
+              echo "this is the secon line"
+              echo "this will create a file named touchy" > touchy
+              cat touchy
+      - name: Same Machine 
+        run: |
+              pwd
+              ls 
